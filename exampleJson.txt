@@ -1,0 +1,23 @@
+{
+  "title": "Little Bear Goes Camping",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "target_word": "fire",
+      "text": "Little Bear and Friend Beaver walk to the lake. They make a small fire. Little Bear watches the flames and is careful.",
+      "art_prompt": "Little Bear and Friend Beaver sit by a small campfire near a calm lake at dusk. Little Bear carefully pokes the fire with a stick. Friend Beaver smiles and watches. Pine trees and soft stars in the background. Whimsical children's book watercolor illustration, soft lighting, friendly and warm."
+    },
+    {
+      "scene_number": 2,
+      "target_word": "log",
+      "text": "Friend Beaver finds a big log. Little Bear sits on the log. They laugh and listen to the birds.",
+      "art_prompt": "Little Bear and Friend Beaver sit together on a big fallen log by the lakeshore. Little Bear sits while Friend Beaver points at a bird. Both are happy and calm. Green forest and gentle water around them. Whimsical children's book watercolor illustration, soft lighting, friendly and warm."
+    },
+    {
+      "scene_number": 3,
+      "target_word": "tent",
+      "text": "They sleep in a blue tent. Little Bear snuggles close. Friend Beaver feels warm and safe.",
+      "art_prompt": "Little Bear and Friend Beaver tuck into a cozy blue tent under tall pine trees. Little Bear snuggles with a small blanket. Friend Beaver looks calm and content. Moonlight and a soft lantern glow outside the tent. Whimsical children's book watercolor illustration, soft lighting, friendly and warm."
+    }
+  ]
+}

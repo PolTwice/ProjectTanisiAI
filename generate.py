@@ -7,9 +7,10 @@ load_dotenv()
 
 client = OpenAI(api_key=os.getenv('OPEN_API_KEY'))
 
+# PURPOSE: 
 def generate_story(topic: str, vocab_words: list[str]) -> str:
     # Open rules file.
-    with open("prompts/story_rules.txt", "r") as f:
+    with open("./story_rules.txt", "r") as f:
         system_rules = f.read()
 
     # Get topic and vocab from arguments
@@ -34,7 +35,7 @@ def generate_story(topic: str, vocab_words: list[str]) -> str:
     # message: represents the generated message. also has the role and the content of the message
     # content: Gives the raw content of the response. 
     # json.loads parses it into a python dictionary. Probably want it raw. 
-    return response.choices[0].message.content
+    return parse_story(response.choices[0].message.content)
 
 def parse_story(raw_output: str) -> dict:
     #try take input and turn it into a dictionary
@@ -46,5 +47,28 @@ def parse_story(raw_output: str) -> dict:
         print(f"Failed to parse JSON: {e}")
         print("Raw output received from model:")
         print(raw_output)
-
+        return False
+    
     return story_data
+
+def reconstruct_json_string(ai_dict) -> str:
+    json_string = json.dumps(ai_dict, indent=2, ensure_ascii=False)
+
+def reconstruct_json_file(ai_dict) -> bool:
+    with open("story_manifest.json", "w", encoding="utf-8") as f:
+        #ai_dict is the dictionary input. 
+        #f is the file where things are going
+        #indent is how 
+        json.dump(ai_dict, f, indent=2, ensure_ascii=False)
+
+#################### Testing ########################
+
+topic = "A bear goes camping"
+vocab = ["fire", "log", "tent"]
+
+with open("./exampleJson.txt", "r") as g:
+    testJson = g.read()
+
+#aioutput = generate_story(topic, vocab)
+
+print(parse_story(testJson))
